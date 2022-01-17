@@ -59,7 +59,7 @@ if(session.getAttribute("Email") == null)
     </div>
   </nav>
 	
-	<h1> Booking Details</h1>
+	<h4 align ="center" style = "color:#8B9A46"> Booking Details</h4>
 	
 
 
@@ -96,18 +96,18 @@ String sql ="SELECT * FROM flights where FlightNo= '"+flightno+"'";
 
 resultSet = statement.executeQuery(sql);
 %>
-<table >
+<table align ="center" >
 
-<tr> 
-<td>FlightNo</td>
-<td>FlightCompany</td>
-<td>TravelingDate</td>
-<td>SourceLocation</td>
-<td>DepartureTime</td>
-<td>DestinationLocation</td>
-<td>ArrivalTime</td>
-<td>NoOfTravellers</td>
-<td>TotalAmount</td>
+<tr style ="background-color:#7CD1B8"> 
+<td>FlightNo &nbsp;</td>
+<td>FlightCompany &nbsp;</td>
+<td>TravelingDate &nbsp;</td>
+<td>SourceLocation &nbsp;</td>
+<td>DepartureTime &nbsp;</td>
+<td>DestinationLocation &nbsp;</td>
+<td>ArrivalTime &nbsp;</td>
+<td>NoOfTravellers &nbsp;</td>
+<td>TotalAmount &nbsp;</td>
 
 </tr>
 
@@ -140,10 +140,10 @@ int totalamount =travlellers *(int)resultSet.getInt("price");
 </tr>
 </table>
 
+<br>
 
-
-<form action = "LoginServlet"> 
-<input type="checkbox" name="Checkbox" >please verify details and click check box. <br>
+<form action = "LoginServlet"  align ="center" > 
+<input type="checkbox" name="Checkbox" >please verify details and click check box. <br><br>
 <input type="hidden" name="modalForm" value="BookingPayment"/>
 <input type = "submit" value ="Payment" >
 </form>

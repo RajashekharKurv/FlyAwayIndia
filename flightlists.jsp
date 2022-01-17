@@ -55,7 +55,7 @@ if(session.getAttribute("SourceLocation") == null)
     </div>
   </nav>
   
-  <h3>Flight Lists</h3>
+  
 
 
 <%@page import="java.sql.DriverManager"%>
@@ -84,7 +84,7 @@ ResultSet resultSet = null;
 
 
 <div>
-    <h3>Flight List</h3>
+    <h4 align ="center" style ="color:#8946A6">Flight List</h4>
  
         
  
@@ -127,16 +127,16 @@ String sql ="SELECT * FROM flights where TravellingDate ='"+date+"' and Route_ID
 
 resultSet = statement.executeQuery(sql);
 %>
-<h3> Traveling from <%= session.getAttribute("Source")%> to <%=session.getAttribute("Destination") %>  on <%=date %> </h3>
- <table >
+<h4 align ="center" style = "color:#8B9A46"> Traveling from <%= session.getAttribute("Source")%> to <%=session.getAttribute("Destination") %>  on <%=date %> </h4>
+ <table align ="center" >
 
-<tr >
-		<th>FlightNo</th>
-        <th>Flight Company</th>
-        <th>Price</th>
-        <th>DepartureTime</th>
-        <th>ArrivalTime</th>
-        <th></th>
+<tr style ="background-color:#7CD1B8" >
+		<th>FlightNo   &nbsp;</th>
+        <th>Flight Company &nbsp;</th>
+        <th>Price &nbsp;</th>
+        <th>DepartureTime &nbsp;</th>
+        <th>ArrivalTime &nbsp;</th>
+        <th>&nbsp; </th>
 </tr>
 
 <%

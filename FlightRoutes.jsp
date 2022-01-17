@@ -4,7 +4,8 @@
 <html>
 <head>
 <meta charset="ISO-8859-1">
-<title>Insert title here</title>
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+
 </head>
 <body>
 
@@ -16,18 +17,45 @@ if(session.getAttribute("UserName") == null)
 
 %>
 
-	<div>
-	    
-	    <a href="AdminWelcome.jsp" target="_blank" >Home</a>
-	    <a href="employee.jsp" target="_blank" >EmployeeDetails</a>
-	    <a href="FlightRoutes.jsp" >FlightRoutes</a>
-	    <a href="bookingorders.jsp" target="_blank" >BookingOrders</a>
-	    <form action="AdminLogout">
-    		<input type="submit" value="LogOut">
-		</form>
-	</div>
-	
-	<h3>Some of the Reference Route Lists</h3>
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="#">FlyAway</a>
+      <button
+        class="navbar-toggler"
+        type="button"
+        data-mdb-toggle="collapse"
+        data-mdb-target="#navbarText"
+        aria-controls="navbarText"
+        aria-expanded="false"
+        aria-label="Toggle navigation"
+      >
+        <i class="fas fa-bars"></i>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarText">
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="AdminWelcome.html" target="_blank" >Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="employee.jsp" target="_blank" >EmployeeDetails</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="FlightRoutes.jsp" target="_blank" >FlightDetails</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="bookingorders.jsp" target="_blank" > BookingOrders</a>
+          </li>
+
+        </ul>
+        <span class="navbar-text">
+            <form action="AdminLogout">
+                <input type="submit" value="LogOut">
+            </form>
+        </span>
+      </div>
+    </div>
+  </nav>
+	<h4 style ="color:#8946A6" >Some of the Reference Route Lists</h4>
 <div>
         
     <table>
@@ -71,7 +99,9 @@ if(session.getAttribute("UserName") == null)
     </table>
     
 </div>
-<h3> Add Routes into database </h3>
+<hr>
+<br>
+<h4 style ="color:#8946A6"> Add Routes into database </h4>
 
 <div>
     <form action="AdminServlet">
@@ -123,9 +153,10 @@ if(session.getAttribute("UserName") == null)
         <input type="submit" value="Save">
     </form>
 </div>
-
+<hr>
+<br>
 <div>
-    <h3>Add New Flight Details</h3>  
+    <h4 style ="color:#8946A6">Add New Flight Details</h4>  
     <form action="AdminServlet">
     <table>
         <tr>

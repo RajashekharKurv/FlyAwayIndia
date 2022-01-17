@@ -62,7 +62,7 @@ if(session.getAttribute("Email") == null)
     </div>
   </nav>
   
-  <h3>Orders History</h3>
+  <h4 align ="center" style = "color:#8B9A46">Orders History</h4>
 
 <%@page import="java.sql.DriverManager"%>
 <%@page import="java.sql.ResultSet"%>
@@ -99,19 +99,19 @@ String sql = "select * from bookingorders ";
 
 resultSet = statement.executeQuery(sql);
 %>
- <table >
+ <table align ="center">
 
-<tr >
-		<th>BookingId</th>
-        <th>FlightNo</th>
-        <th>FlightCompany</th>
-        <th>TravelingDate</th>
-        <th>SourceLocation</th>
-        <th>DepartureTime</th>
-        <th>DestinationLocation</th>
-        <th>ArrivalTime</th>
-        <th>NoOfTravellers</th>
-        <th>TotalAmount</th>
+<tr style ="background-color:#7CD1B8" >
+		<th>BookingId &nbsp;</th>
+        <th>FlightNo &nbsp;</th>
+        <th>FlightCompany &nbsp;</th>
+        <th>TravelingDate &nbsp;</th>
+        <th>SourceLocation &nbsp;</th>
+        <th>DepartureTime &nbsp;</th>
+        <th>DestinationLocation &nbsp;</th>
+        <th>ArrivalTime &nbsp;</th>
+        <th>NoOfTravellers &nbsp;</th>
+        <th>TotalAmount in Rs.&nbsp;</th>
 </tr>
 
 <%
